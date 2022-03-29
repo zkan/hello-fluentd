@@ -1,0 +1,2 @@
+# hello-fluentd
+Hello, Fluentd!
