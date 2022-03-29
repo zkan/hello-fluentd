@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  fluentd:
+    image: fluent/fluentd:v1.14-1
+    volumes:
+      - ./conf:/fluentd/etc
+      - ./log:/fluentd/log
+    ports:
+      - "24224:24224"
+      - "24224:24224/udp"
+      - "8888:8888"
+    #logging:
+    #  driver: "json-file"
+    #  options:
+    #    max-size: 100m
+    #    max-file: "5"
